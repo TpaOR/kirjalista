@@ -26,6 +26,9 @@ class Program
 {
     static void Main(string[] args)
     {
+        //Ensimmäisenä luodaan Kirja -luokka ja lista, johon voi tallentaa sen olioita.
+        
+        //Kerrotaan käyttäjällle, mitä valintoja hän voi tehdä.
         Console.WriteLine("Hello, World!");
         Console.WriteLine("Toinen rivi");
 

@@ -1,12 +1,22 @@
 using System;
 
-namespace Kirjalista
+namespace kirjalista
 {
   public class Kirja
   {
-    //Luokan muuttujat tehtävänannon mukaisesti.
+    private string nimi;
+    public string kirjailija;
 
-    //Seuraavaksi luokan konstruktori.
+    public Kirja(string nimi, string kirjailija)
+    {
+        this.nimi = nimi;
+        this.kirjailija = kirjailija;
+    }
+
+    public override string ToString()
+    {
+        return $"{nimi} - {kirjailija}";
+    }
 
   }
 }

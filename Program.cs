@@ -1,36 +1,69 @@
-﻿namespace kirjalista;
-
-/*
-Lisätä kirjoja kirjalistalle 
-    Tarvitaan siis lista, johon voidaan tallentaa Kirja -luokan olioita.
-    Eli luodaan luokka Kirja, jolla on alla olevat ominaisuudet.
-Kirjalla on vähintään nimi, kirjoittaja, julkaisuvuosi ja genre. 
-    Kirjan pitää siis olla olio.
-Poistaa kirjoja listalta 
-    Pitää tehdä metodi PoistaKirja().
-    Sitä ennen on varmaan pitänyt tehdä myös metodi LisaaKirja().
-Näyttää kaikki kirjat 
-    Metodi TulostaKaikkiKirjat().
-Näyttää kirjat genren mukaan
-    Metodi TulostaGenrenKirjat().
-Etsiä kirjoja kirjoittajan tai nimen perusteella 
-    Metodi TulostaKirjoittajanKirjat().
-    Metodi TulostaNimella().
-
-    Meillä on siis paljon metodeita, joista käyttäjä valitsee, mitä tehdään
-    Tarvitaan siis jonkinlainen valikkorakenne pääohjelmaan.
-(Valinnainen lisäominaisuus) Tallentaa ja ladata kirjalista tiedostosta 
-*/
+﻿using System;
+namespace kirjalista;
 
 class Program
 {
     static void Main(string[] args)
     {
-        //Ensimmäisenä luodaan Kirja -luokka ja lista, johon voi tallentaa sen olioita.
-        
-        //Kerrotaan käyttäjällle, mitä valintoja hän voi tehdä.
-        Console.WriteLine("Hello, World!");
-        Console.WriteLine("Toinen rivi");
+        List<Kirja> kirjat = new List<Kirja>();
 
+        //Tehdään käyttäjälle valikkorakenne.
+        //1. Lisää kirja.
+        //2. Poista kirja.
+        //3. Listaa kirjat.
+
+        //Ohjelma jatkuu kunnes käyttäjä syöttää '0'.
+
+        //Kun saatte tämän toimimaan, muuttakaa rakenteeksi switch - case.
+    
+        while (true)
+        {
+            Console.WriteLine("Valitse:\n1. Lisää kirja\n2. Poista kirja\n3. Listaa kirjat\n0. Lopeta\n");
+
+            //Luetaan käyttäjän syöte.
+            string syote = Console.ReadLine();
+
+            //Toimitaan käyttäjän syötteen mukaisesti.
+            if (syote == "1")
+            {
+                Console.WriteLine("Kirjan lisääminen.");
+                //Toteutetaan tänne LisääKirja -metodin kutsu.
+                LisaaKirja(kirjat);
+            }
+            else if (syote == "2")
+            {
+                Console.WriteLine("Kirjan poistaminen.");
+            }
+            else if (syote == "3")
+            {
+                Console.WriteLine("Kirjojen listaaminen.");
+            }
+            else if (syote == "0")
+            {
+                Console.WriteLine("HeiHei!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Kelpaamaton syöte.");
+            }
+        }
     }
+
+    public static void LisaaKirja(List<Kirja> kirjat)
+    {
+        //Laitetaan tänne koodi, joka kysyy käyttäjältä kirjan nimen, kirjailijan, vuoden ja genren.
+        //Kun käyttäjältä on kysytty nämä tiedot, kutsutaan niillä tiedoilla Kirjan konstruktoria.
+        //kirjat.Add(täällä kutsutaan konstruktoria)
+        
+    }
+
+    //Poista kirja metodi.
+
+    //Listaa kirjat metodi foreachilla.
+
+
+    
+
 }
+

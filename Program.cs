@@ -18,6 +18,7 @@ class Program
     
         while (true)
         {
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine("Valitse:\n1. Lisää kirja\n2. Poista kirja\n3. Listaa kirjat\n0. Lopeta\n");
 
             //Luetaan käyttäjän syöte.
